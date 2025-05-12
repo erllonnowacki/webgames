@@ -1,0 +1,20 @@
+<div class="game-container">
+  <canvas #gameCanvas width="800" height="600"
+          (touchstart)="onTouchStart($event)"
+          (touchmove)="onTouchMove($event)">
+  </canvas>
+
+  <div class="overlay" *ngIf="!gameStarted || gameOver">
+    <div *ngIf="!gameStarted && !gameOver">
+      <button (click)="startGame()">Start</button>
+    </div>
+
+    <div *ngIf="gameOver">
+      <h2>Game Over</h2>
+      <p>Your Score: {{ score }}</p>
+      <button (click)="restartGame()">Restart</button>
+    </div>
+  </div>
+
+  <div class="score" *ngIf="gameStarted && !gameOver">Score: {{ score }}</div>
+</div>

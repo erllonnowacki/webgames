@@ -1,0 +1,19 @@
+.canvas {
+  border: 2px solid #000;
+  display: block;
+  margin: 20px auto;
+  background-color: #f0f8ff;
+}
+
+.score {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.game-over {
+  text-align: center;
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
